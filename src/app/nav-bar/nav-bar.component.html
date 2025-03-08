@@ -1,3 +1,11 @@
-<a [routerLink]="['/weather']">weather </a>
-<a [routerLink]="['/cities']">cities </a>
-<a [routerLink]="['/countries']">countries</a>
+<header>
+    <mat-toolbar color="primary">
+        <button mat-icon-button [routerLink]="['/']">
+          <mat-icon>home</mat-icon>
+        </button>
+  
+        <a mat-flat-button color="primary" [routerLink]="['/countries']">Countries</a>
+        <a mat-flat-button color="primary" [routerLink]="['/cities']">Cities</a>
+        <span class="separator"></span>
+    </mat-toolbar>
+  </header>
