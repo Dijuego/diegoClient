@@ -1,0 +1,15 @@
+<h3>Country Population</h3>
+
+@if (countryPop) {
+    <p>
+    <strong>{{countryPop.name}}:</strong><br/>
+    Population {{countryPop.population}}<br/>
+    in {{countryPop.cityCount}} cities
+    </p>
+}
+
+<div>
+    <a mat-flat-button color="secondary"
+        [routerLink]="['/countries']" routerLinkActive="router-link-active">Back</a>
+
+</div>

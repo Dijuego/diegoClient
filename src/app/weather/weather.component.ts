@@ -19,13 +19,9 @@ export class WeatherComponent {
   }
 
   getForecasts() {
-    this.http.get<WeatherForecast[]>(`${environment.baseUrl}weatherforecast`).subscribe(
-      (result) => {
-        this.forecasts = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    this.http.get<WeatherForecast[]>(`${environment.baseUrl}weatherforecast`).subscribe({
+      next: result => this.forecasts = result,
+      error: error => console.error(error)
+    });
   }
 }

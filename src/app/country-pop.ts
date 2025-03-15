@@ -4,4 +4,5 @@ export interface CountryPop {
     iso2: string;
     iso3: string;
     population: number;
+    cityCount: number;
 }
