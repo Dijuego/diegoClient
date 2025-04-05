@@ -21,9 +21,9 @@ export class CountriesComponent implements OnInit{
   }
   
   getCountries() {
-      this.http.get<Country[]>(`${environment.baseUrl}api/Countries`).subscribe({
-        next: result => this.countries = result,
-        error: error => console.error(error)
-      });
-    }
+    this.http.get<Country[]>(`${environment.baseUrl}api/Countries`).subscribe({
+      next: result => this.countries = result,
+      error: error => console.error(error)
+    });
+  }
 }

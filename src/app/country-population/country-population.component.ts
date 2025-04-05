@@ -25,10 +25,10 @@ export class CountryPopulationComponent implements OnInit{
     }
     
     getCountryPopulation() {
-        let id = this.activatedRoute.snapshot.paramMap.get('id');
-        this.http.get<CountryPop>(`${environment.baseUrl}api/Countries/GetPopulation/${id}`).subscribe({
-          next: result => this.countryPop = result,
-          error: error => console.error(error)
-        });
-      }
+      let id = this.activatedRoute.snapshot.paramMap.get('id');
+      this.http.get<CountryPop>(`${environment.baseUrl}api/Countries/GetPopulation/${id}`).subscribe({
+        next: result => this.countryPop = result,
+        error: error => console.error(error)
+      });
+    }
 }
