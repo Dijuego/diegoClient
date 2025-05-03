@@ -29,6 +29,12 @@ export class AuthService {
       }
     }));
   }
-  logout(){}
+  logout(){
+    localStorage.removeItem("JwtToken_CityCountry");
+    this.setAuthStatus(false);
+  }
 
+  isAuthenticated(): boolean {
+    return localStorage.getItem("JwtToken_CityCountry") != null;
+  }
 }
